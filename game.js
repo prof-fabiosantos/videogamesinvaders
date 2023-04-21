@@ -225,7 +225,7 @@ function endGame() {
     
     // se o jogador alcançar a última fase, exibe uma mensagem de vitória
     if (currentPhase >= 10) {
-        this.add.text(400, 300, 'Parabéns, você foi o campeão!', { fontSize: '64px', fill: '#000' }).setOrigin(0.5);
+        this.add.text(400, 450, 'Parabéns, você foi o campeão!', { fontSize: '64px', fill: '#000' }).setOrigin(0.5);
     }
 
     // pausa o jogo e adiciona o texto de fim de jogo
