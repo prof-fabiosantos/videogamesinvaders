@@ -63,7 +63,7 @@ function create ()
     this.add.image(400, 300, 'background');   
      
     // adiciona a música de fundo
-    this.backgroundMusic = this.sound.add('bgmusic', { loop: true });
+    this.backgroundMusic = this.sound.add('bgmusic', { loop: false });
     this.backgroundMusic.play();
 
     // adiciona o jogador
@@ -253,7 +253,9 @@ function endGame() {
 
     // define a ação para reiniciar o jogo
     this.input.keyboard.on('keydown-R', function() {
+        currentPhase = 1;
         this.scene.restart();
+        
     }, this);
     gameOver = true;
 }
