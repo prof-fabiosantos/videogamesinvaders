@@ -43,9 +43,10 @@ function preload ()
     this.load.image('comment10', 'comment10.png');
     this.load.image('bomb', 'bomb.png');    
     this.load.image('background', 'background.png');
-    this.load.audio('bgmusic', 'background_music.mp3');
+    this.load.audio('bgmusic', 'background_music.mp3');   
     this.load.audio('explosion', 'explosion.wav');
     this.load.audio('gameover', 'gameover.wav');
+    
 
     gameOver = false;
 }
@@ -63,8 +64,9 @@ function create ()
     this.add.image(400, 300, 'background');   
      
     // adiciona a música de fundo
-    this.backgroundMusic = this.sound.add('bgmusic', { loop: false });
-    this.backgroundMusic.play();
+    this.backgroundMusic = this.sound.add('bgmusic', { loop: true });
+    this.backgroundMusic.play(); 
+    
 
     // adiciona o jogador
     this.player = this.physics.add.sprite(100, 110, 'player');
